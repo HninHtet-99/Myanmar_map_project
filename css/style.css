@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Noto+Sans+Myanmar:wght@400;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', 'Noto Sans Myanmar', serif;
+}
+body{
+    background-color: #333333;
+}
+.box{
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info{
+    width: 50%;
+}
+.info-title{
+    color: rgba(0, 255, 255, 0.747);
+}
+.info-des{
+    margin: 20px 0;
+    font-size: 12px;
+    color: #fff;
+}
+.info-current{
+    color: rgb(72, 235, 221);
+    font-size: 1.5em;
+}
+.map{
+    fill: rgba(49, 216, 194, 0.699);
+}
+.map svg{
+    stroke: #82c598;
+    stroke-opacity: 0.5;
+}
+.map svg path{
+    transition: 0.5s;
+}
+.map svg path.active{
+    fill: rgb(132, 218, 51) !important;
+}
+/* .map svg path:hover{
+    fill: rgb(132, 218, 51);
+} */
+@media screen and (max-width: 450px) {
+    .box{
+        height: 150vh !important;
+    }
+}
+@media screen and (max-width: 900px) {
+    .box{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info-title{
+        font-size: 30px ;
+        margin-top: 30px;
+    }
+    .info-current{
+        margin-bottom: 20px;
+        font-size: 1.1em;
+    }
+}
